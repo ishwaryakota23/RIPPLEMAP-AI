@@ -1,0 +1,14 @@
+class: GitHubConnection
+table: github_connection
+
+fields:
+  sessionId: String?
+  authUserId: String?
+  githubLogin: String
+  encryptedAccessToken: String
+  createdAt: DateTime
+
+indexes:
+  github_connection_auth_user_id_idx:
+    fields: authUserId
+    unique: true

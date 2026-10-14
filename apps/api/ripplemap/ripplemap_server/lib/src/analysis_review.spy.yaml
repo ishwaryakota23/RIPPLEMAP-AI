@@ -1,0 +1,16 @@
+class: AnalysisReview
+table: analysis_review
+
+fields:
+  authUserId: String
+  jobKey: String
+  decision: String
+  note: String?
+  updatedAt: DateTime
+
+indexes:
+  analysis_review_user_job_idx:
+    fields: authUserId, jobKey
+    unique: true
+  analysis_review_user_idx:
+    fields: authUserId

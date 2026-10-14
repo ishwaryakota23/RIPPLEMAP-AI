@@ -1,0 +1,44 @@
+services:
+  # Development services
+  postgres:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "8090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ripplemap
+      POSTGRES_PASSWORD: "xvZ1m--8f2E1l6WBsVEpXWiiCIlBQhpJ"
+    volumes:
+      - ripplemap_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6.2.6
+    ports:
+      - "8091:6379"
+    command: redis-server --requirepass "wGS2X5eHM2DtQek-V6vbznOtjzO8r5l2"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  # Test services
+  postgres_test:
+    image: ghcr.io/serverpod/postgres:16
+    ports:
+      - "9090:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: ripplemap_test
+      POSTGRES_PASSWORD: "1HchUJDGCNSNNSnl0-er50Vdk5lwdySP"
+    volumes:
+      - ripplemap_test_data:/var/lib/postgresql/data
+
+  redis_test:
+    image: redis:6.2.6
+    ports:
+      - "9091:6379"
+    command: redis-server --requirepass "IaVGFClySUJ0FDuvyAukV7Gjj4NVWaL3"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+volumes:
+  ripplemap_data:
+  ripplemap_test_data:

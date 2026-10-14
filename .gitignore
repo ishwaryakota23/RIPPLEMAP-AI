@@ -1,0 +1,23 @@
+# Environment
+.env
+.env.local
+
+# Dart and Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Serverpod local databases and secrets
+.serverpod/
+config/passwords.yaml
+
+# Python tooling residue
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db

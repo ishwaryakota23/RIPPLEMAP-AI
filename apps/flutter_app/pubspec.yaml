@@ -1,0 +1,23 @@
+name: ripplemap_flutter
+description: Flutter dashboard for RippleMap AI.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.12.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.2
+  ripplemap_client:
+    path: ../api/ripplemap/ripplemap_client
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true

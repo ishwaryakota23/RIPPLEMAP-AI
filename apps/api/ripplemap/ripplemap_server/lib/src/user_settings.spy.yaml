@@ -1,0 +1,12 @@
+class: UserSettings
+table: user_settings
+
+fields:
+  authUserId: String
+  selectedRepository: String?
+  updatedAt: DateTime
+
+indexes:
+  user_settings_auth_user_id_idx:
+    fields: authUserId
+    unique: true

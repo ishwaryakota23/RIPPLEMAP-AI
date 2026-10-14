@@ -1,0 +1,8 @@
+class: AnalysisTask
+
+fields:
+  jobKey: String
+  authUserId: String
+  owner: String
+  repository: String
+  pullRequestNumber: int

@@ -1,0 +1,12 @@
+class: WebhookDelivery
+table: webhook_delivery
+
+fields:
+  deliveryId: String
+  eventType: String
+  receivedAt: DateTime
+
+indexes:
+  webhook_delivery_id_idx:
+    fields: deliveryId
+    unique: true

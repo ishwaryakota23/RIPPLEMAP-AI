@@ -1,0 +1,24 @@
+name: ripplemap_server
+description: Starting point for a Serverpod server.
+# version: 1.0.0
+# homepage: https://www.example.com
+
+environment:
+  sdk: '^3.12.2'
+
+resolution: workspace
+
+dependencies:
+  crypto: ^3.0.7
+  cryptography: ^2.9.0
+  http: ^1.6.0
+  path: ^1.9.1
+  serverpod: 4.0.4
+  serverpod_auth_core_server: 4.0.4
+  serverpod_auth_idp_server: 4.0.4
+  tree_sitter_language_pack: ^1.22.1
+
+dev_dependencies:
+  lints: '>=3.0.0 <7.0.0'
+  serverpod_test: 4.0.4
+  test: ^1.25.5

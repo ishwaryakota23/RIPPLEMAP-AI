@@ -1,0 +1,24 @@
+class: AnalysisJob
+table: analysis_job
+
+fields:
+  jobKey: String
+  sessionId: String?
+  authUserId: String?
+  owner: String
+  repository: String
+  pullRequestNumber: int
+  status: String
+  reportJson: String?
+  errorMessage: String?
+  createdAt: DateTime
+  updatedAt: DateTime
+
+indexes:
+  analysis_job_key_idx:
+    fields: jobKey
+    unique: true
+  analysis_job_auth_user_id_idx:
+    fields: authUserId
+  analysis_job_created_at_idx:
+    fields: createdAt
